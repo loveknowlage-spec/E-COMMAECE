@@ -2,12 +2,11 @@ import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   
   return {
-    // This MUST match your repo name exactly as seen in your video
+    // This MUST match your GitHub repo name exactly
     base: '/E-COMMAECE/', 
     
     server: {
@@ -27,7 +26,7 @@ export default defineConfig(({ mode }) => {
     build: {
       rollupOptions: {
         output: {
-          // This fixes the large chunk error by splitting vendor files
+          // This fixes the "Large chunks" warning from your screenshot
           manualChunks(id) {
             if (id.includes('node_modules')) {
               return 'vendor';

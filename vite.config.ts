@@ -7,7 +7,11 @@ export default defineConfig(({ mode }) => {
   
   return {
     // This MUST match your GitHub repo name exactly
-    base: '/E-COMMAECE/', 
+ export default defineConfig({
+  base: '/E-COMMAECE/', // Must match your GitHub repo name exactly
+  plugins: [react()],
+})
+   
     
     server: {
       port: 3000,

@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   
   return {
-    // Ensure this matches your GitHub Repository name exactly
+    // This MUST match your repo name exactly as seen in your video
     base: '/E-COMMAECE/', 
     
     server: {
@@ -25,9 +25,9 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      // This solves the "Large Chunks" error by splitting node_modules
       rollupOptions: {
         output: {
+          // This fixes the large chunk error by splitting vendor files
           manualChunks(id) {
             if (id.includes('node_modules')) {
               return 'vendor';
@@ -35,7 +35,6 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
-      chunkSizeWarningLimit: 1000, // Increases limit to 1000kb
     },
   };
 });

@@ -2,6 +2,7 @@
   "name": ">DIPTO | Premium Shop",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://loveknowlage-spec.github.io/E-COMMAECE/"
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,0 +1,7 @@
+{
+  "name": "Nitec. Premium E-Commerce",
+  "description": "A high-end, production-ready e-commerce platform with a sophisticated UI, integrated shopping cart, and a comprehensive admin dashboard for inventory and order management.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
